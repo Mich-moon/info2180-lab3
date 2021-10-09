@@ -30,6 +30,16 @@ window.onload = function() {
             tile.classList.add("O");
             record.push("O");
         }
-    }
+    };
+
+    // ACTIVITY - THREE
+    tile.onmouseenter = function(){
+        tile.classList.add("hover");
+        //console.log("hovered");
+    };
+    tile.onmouseleave = function(){
+        tile.classList.remove("hover");
+        //console.log("hovered");
+    };
   };
 };
