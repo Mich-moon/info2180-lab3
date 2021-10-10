@@ -79,4 +79,22 @@ window.onload = function () {
         stat.textContent = "Congratulations! "+champ +" is the Winner!";
 
     };
+
+    //  ACTIVITY - FIVE
+    let newGame = document.getElementsByClassName("btn")[0];
+    newGame.onclick = function () {
+        record = []; // reset the state
+
+        for (let b of boxList) {
+            // clear the grid
+            b.innerHTML = ""; 
+            b.classList.remove("X", "O");
+        }
+
+        // reset status div
+        let stat = document.getElementById("status");
+        stat.classList.remove("you-won");
+        stat.textContent = "Move your mouse over a square and click to play an X or an O.";
+    };
+
 };
