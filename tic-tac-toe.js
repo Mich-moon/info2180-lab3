@@ -18,7 +18,10 @@ window.onload = function () {
     for (let tile of boxList) {
         tile.onclick = function () {
 
-            if (record.length == 0 || record[record.length - 1] == "O") {
+            // disable click event for a box already clicked
+            if (tile.classList.contains("X") || tile.classList.contains("O")) {
+                
+            } else if (record.length == 0 || record[record.length - 1] == "O") {
                 // if array is empty OR if last element is O, push an X and add to state
                 tile.innerHTML = "<strong>X</strong>";
                 tile.classList.add("X");
@@ -96,5 +99,8 @@ window.onload = function () {
         stat.classList.remove("you-won");
         stat.textContent = "Move your mouse over a square and click to play an X or an O.";
     };
+
+    //  ACTIVITY - SIX
+    // lines 21 - 23
 
 };
